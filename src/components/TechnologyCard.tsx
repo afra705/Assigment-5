@@ -1,14 +1,24 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { MdStarRate } from "react-icons/md";
 import type { ITechnology } from "../type";
+import type { Dispatch} from "react";
 
 export interface TechnologyCardProps {
     technology: ITechnology;
+      isStack: ITechnology[];
+      setIsStack: Dispatch<React.SetStateAction<ITechnology[]>>;
 }
 
-const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+const TechnologyCard = ({ technology,isStack,
+  setIsStack }: TechnologyCardProps) => {
     
-    // const [] = useState();
+    const [isAdded, setIsAdded] = useState(false);
+    const handleAdded = () =>{
+    setIsAdded(true);
+    setIsStack([...isStack, technology]);
+   }
+
+
 
     return (
         <div className="card bg-base-100 w-75 gap-3 shadow-sm">
@@ -30,7 +40,11 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
                   <p className="ml-3 text-gray-500">{technology.difficulty}</p>
                   <p className="font-bold flex items-center text-center gap-1"><MdStarRate className="text-yellow-500"/>{technology.rating}</p>
                 </div>
-                <button className="text-center mt-3 bg-black text-white w-full h-8 rounded-xl">Add to stack</button>
+                <button onClick={()=> handleAdded()} 
+                 disabled={isAdded}
+                className="text-center mt-3 bg-black text-white w-full h-9 rounded-xl">{isAdded === true? 'Added to stack' : 'Add to stack'}
+                
+                </button>
               </div>
             </div>
     )

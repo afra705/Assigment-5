@@ -1,7 +1,7 @@
 import BannerImg from "../assets/banner-stack.png";
 export const Banner = () => {
   return (
-    <div className="lg:w-7xl container mx-auto flex justify-between mt-20 ml-35 mb-20 ">
+    <div className="lg:w-7xl container mx-auto flex justify-between mt-20 ml-35 mb-16 ">
       {/* part1 */}
       <div>
         <h1 className="font-bold text-6xl">
@@ -19,7 +19,7 @@ export const Banner = () => {
          </div>
       </div>
       {/* part2 */}
-      <div>
+      <div className="mt-[-110px]">
         <img src={BannerImg} alt="" />
       </div>
     </div>

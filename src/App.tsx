@@ -4,6 +4,7 @@ import { Banner } from './components/Banner'
 import { Nav } from './components/nav'
 import Technologies from './components/Technologies'
 import type { ITechnology } from './type'
+import { Footer } from './components/Footer'
 
 function App() {
 
@@ -17,10 +18,10 @@ function App() {
     <>
       <Nav></Nav>
       <Banner></Banner>
-      <Suspense fallback={<h2>Loading....</h2>}>
+      <Suspense fallback={<h2 className='tex-2xl font-bold lg:w-7xl container mx-auto'>Loading....</h2>}>
             <Technologies technologyPromise={technologyPromise()}></Technologies>
       </Suspense>
-     
+     <Footer></Footer>
     </>
   )
 }

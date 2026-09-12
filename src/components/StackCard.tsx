@@ -1,7 +1,7 @@
 import { IoMdClose } from "react-icons/io";
 import type { ITechnology } from "../type";
 import type { Dispatch } from "react";
-import Technologies from "./Technologies";
+import { toast } from "react-toastify";
 
 export interface TechnologyCardProps {
   isStack: ITechnology[];
@@ -14,9 +14,12 @@ export const StackCard = ({ isStack, setIsStack }: TechnologyCardProps) => {
       (Stack) => Stack.name !== technology.name,
     );
     setIsStack(restTechnology);
+
+    toast.info(`${technology.name} removed from stack`)
   };
 const RemoveAll = () =>{
     setIsStack([])
+    toast.info(`Stack cleared successfully.`)
 }
 
   return (

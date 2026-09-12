@@ -1,2 +1,11 @@
+.brand-gradient {
+  background: linear-gradient(to right, #f97316, #ec4899, #6930ed);
+  background-clip: text;
+  color: transparent;
+}
+.btn-gradient {
+  background: linear-gradient(to right, #F97316, #EC4899);
+}
+
 @plugin "daisyui";
 @import "tailwindcss";

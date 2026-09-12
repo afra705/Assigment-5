@@ -11,7 +11,7 @@ const Technologies = ({ technologyPromise }: TechnologiesProps) => {
   const [isStack, setIsStack] = useState<ITechnology[]>([]);
 
   return (
-    <div className="lg:w-7xl container mx-auto ml-35">
+    <div className="lg:w-7xl container mx-auto ml-35 mb-30">
       <div>
         <h2 className="font-bold text-3xl">
           Explore the{" "}

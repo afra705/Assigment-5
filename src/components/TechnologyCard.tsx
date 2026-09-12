@@ -16,8 +16,8 @@ const TechnologyCard = ({ technology,isStack,
     const handleAdded = () =>{
     setIsAdded(true);
     setIsStack([...isStack, technology]);
-   }
-
+    }
+    
 
 
     return (

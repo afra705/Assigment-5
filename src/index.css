@@ -6,6 +6,10 @@
 .btn-gradient {
   background: linear-gradient(to right, #F97316, #EC4899);
 }
-
+.text-gradient{
+  background: linear-gradient(to right, #EC4899, #8B5CF6);
+  background-clip: text;
+  color: transparent;
+}
 @plugin "daisyui";
 @import "tailwindcss";

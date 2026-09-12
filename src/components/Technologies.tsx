@@ -15,7 +15,7 @@ const Technologies = ({ technologyPromise }: TechnologiesProps) => {
       <div>
         <h2 className="font-bold text-3xl">
           Explore the{" "}
-          <span className="bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
+          <span className="text-gradient">
             Technologies{" "}
           </span>
         </h2>

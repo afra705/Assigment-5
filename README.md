@@ -1,5 +1,7 @@
 🚀Project Name: DeVStack.
+
   Description: It is a simple React application where users can interect with different technologies and build their own stack.Users also add their stack,remove the stack and also remove the all stack in one click.
+
 ⚙️Technology Used
 - React.js
 - Tailwind CSS, DaisyUI
@@ -7,6 +9,7 @@
 - React-Toastify 
 - JSON 
 - Vite 
+
 ✨ Features
 1. Add technogies to stack
 2. Remove technologies from stack
@@ -28,6 +31,6 @@ An example:
 </p>
 
 7. A parent sends data to a child using its props.
- <TechnologyCard technology={technology} />
-A child can send something back to the parent by calling a function.
+  <TechnologyCard technology={technology} />
+  A child can send something back to the parent by calling a function.
   <TechnologyCard setIsStack={setIsStack}/>

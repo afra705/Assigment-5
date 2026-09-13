@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { MdStarRate } from "react-icons/md";
 import type { ITechnology } from "../type";
 import type { Dispatch } from "react";
@@ -15,13 +14,13 @@ const TechnologyCard = ({
   isStack,
   setIsStack,
 }: TechnologyCardProps) => {
-  const [isAdded, setIsAdded] = useState(false);
+  const isAdded = isStack.some((tech) => tech.name == technology.name)
+
   const handleAdded = () => {
     if (isAdded) {
       toast.warning(`${technology.name} is already added to stack`);
       return;
     }
-    setIsAdded(true);
     setIsStack([...isStack, technology]);
     toast.success(`${technology.name} is added to stack`);
   };

@@ -24,13 +24,8 @@
 5. React needs a unique key to find the specific item in list.It helps React to understand which card is changed
 6. Conditional rendering means showing different UI that based on a condition.
 An example:
-<p className="text-gray-500">
   {isStack.length > 0
     ? `${isStack.length} Technology Selected`
     : "No technologies selected yet."}
-</p>
 
-7. A parent sends data to a child using its props.
-  <TechnologyCard technology={technology} />
-  A child can send something back to the parent by calling a function.
-  <TechnologyCard setIsStack={setIsStack}/>
+7. A parent sends data to a child using its props.A child can send something back to the parent by calling a function.
